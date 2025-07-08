@@ -4,40 +4,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import { LucideArrowRight } from "lucide-react";
 
-const mockJobs = [
-  {
-    id: 1,
-    title: "Senior Frontend Developer",
-    department: "Engineering",
-    location: "Remote",
-    description:
-      "Join our team to build cutting-edge user interfaces with React and modern web technologies.",
-  },
-  {
-    id: 2,
-    title: "UX/UI Designer",
-    department: "Design",
-    location: "New York",
-    description:
-      "Create beautiful, intuitive designs that delight our users and push the boundaries of digital experiences.",
-  },
-  {
-    id: 3,
-    title: "AI Research Scientist",
-    department: "Research",
-    location: "San Francisco",
-    description:
-      "Work on next-generation AI models that will shape the future of technology and human interaction.",
-  },
-  {
-    id: 4,
-    title: "Product Manager",
-    department: "Product",
-    location: "London",
-    description:
-      "Lead product development from concept to launch, working with cross-functional teams to deliver exceptional value.",
-  },
-];
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
@@ -330,77 +297,7 @@ const CareersPage = () => {
         id="current-openings"
         className="py-24 px-4 md:px-8 bg-gradient-to-b from-black via-blue-900/10 to-black"
       >
-        <motion.div
-          className="max-w-6xl mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <motion.h2
-            variants={fadeInUp}
-            className="text-4xl md:text-7xl font-bold text-center mb-12 text-white"
-          >
-            Current Openings
-          </motion.h2>
-
-          {mockJobs.length === 0 ? (
-            <motion.p variants={fadeInUp} className="text-center text-gray-400">
-              No openings at the moment. Check back soon!
-            </motion.p>
-          ) : (
-            <motion.div
-              variants={staggerContainer}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            >
-              {mockJobs.map((job) => (
-                <motion.div
-                  key={job.id}
-                  variants={fadeInUp}
-                  whileHover={{ y: -5 }}
-                  className="group"
-                >
-                  <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl shadow-xl border border-gray-700 overflow-hidden">
-                    {/* Animated gradient border */}
-                    <motion.div
-                      className="absolute inset-0 opacity-0 group-hover:opacity-100"
-                      animate={{
-                        background: [
-                          "linear-gradient(0deg, rgba(59,130,246,0) 0%, rgba(59,130,246,0.3) 50%, rgba(59,130,246,0) 100%)",
-                          "linear-gradient(120deg, rgba(59,130,246,0) 0%, rgba(59,130,246,0.3) 50%, rgba(59,130,246,0) 100%)",
-                          "linear-gradient(240deg, rgba(59,130,246,0) 0%, rgba(59,130,246,0.3) 50%, rgba(59,130,246,0) 100%)",
-                          "linear-gradient(360deg, rgba(59,130,246,0) 0%, rgba(59,130,246,0.3) 50%, rgba(59,130,246,0) 100%)",
-                        ],
-                      }}
-                      transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        ease: "linear",
-                      }}
-                    />
-
-                    <div className="relative z-10">
-                      <h3 className="text-xl font-semibold text-cyan-400 mb-2">
-                        {job.title}
-                      </h3>
-                      <p className="text-gray-400 mb-3">
-                        {job.department} | {job.location}
-                      </p>
-                      <p className="text-gray-300 mb-4">{job.description}</p>
-                      <motion.a
-                        href={`mailto:careers@yourcompany.com?subject=Application for ${job.title}`}
-                        className="inline-flex items-center space-x-2 text-cyan-400 group-hover:text-white transition-colors"
-                        whileHover={{ x: 5 }}
-                      >
-                        <span>Apply Now</span>
-                        <LucideArrowRight className="h-4 w-4" />
-                      </motion.a>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          )}
-        </motion.div>
+        job form
       </section>
     </div>
   );

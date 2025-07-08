@@ -156,7 +156,7 @@ const AboutUsPage = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto rounded-full"></div>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             {teamStats.map((stat, index) => {
               const icons = [Users, Globe, Award, TrendingUp];
               const IconComponent = icons[index % icons.length];
@@ -513,7 +513,7 @@ const AboutUsPage = () => {
                 </motion.h3>
                 <ul className="space-y-4 text-blue-100">
                   {[
-                    "25+ experienced professionals dedicated to your success",
+                    "50+ experienced professionals dedicated to your success",
                     "Located in Hyderabad - India's IT hub",
                     "Comprehensive backend operations under one roof",
                     "Proven track record in IT services and consulting",

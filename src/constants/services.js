@@ -13,7 +13,7 @@ import {
 const services = [
   {
     icon: <DollarSign className="w-8 h-8" />,
-    title: "HR Payroll",
+    title: "HR Payroll & Services",
     description:
       "Comprehensive payroll solutions tailored for global and local compliance.",
     subServices: [
@@ -26,6 +26,14 @@ const services = [
         title: "India Payroll",
         description:
           "Efficient payroll management for India, adhering to local regulations.",
+      },
+      {
+        title: "Recruitment Services",
+        description: "End-to-end hiring solutions to find top talent.",
+      },
+      {
+        title: "Employee Engagement",
+        description: "Programs to boost morale and productivity.",
       },
     ],
   },
@@ -105,21 +113,7 @@ const services = [
       },
     ],
   },
-  {
-    icon: <Users className="w-8 h-8" />,
-    title: "HR Services",
-    description: "Comprehensive HR solutions for employee management.",
-    subServices: [
-      {
-        title: "Recruitment Services",
-        description: "End-to-end hiring solutions to find top talent.",
-      },
-      {
-        title: "Employee Engagement",
-        description: "Programs to boost morale and productivity.",
-      },
-    ],
-  },
+  
   {
     icon: <FileText className="w-8 h-8" />,
     title: "Data Management",

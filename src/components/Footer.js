@@ -418,7 +418,7 @@ function Footer() {
 
               <motion.button
                 className="mt-6 text-pink-400 hover:text-pink-300 font-medium flex items-center space-x-2"
-                onClick={() => handleNavigation("/about")}
+                onClick={() => handleNavigation("#about")}
                 whileHover={{ x: 5 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -442,11 +442,10 @@ function Footer() {
               <h4 className="text-xl font-bold mb-6 text-blue-400">Company</h4>
               <ul className="space-y-4">
                 {[
-                  { name: "About Us", path: "/#about" },
+                  { name: "About Us", path: "#about" },
                   { name: "Our Services", path: "/#services" },
-                  { name: "Leadership", path: "/#leadership" },
+                  // { name: "Leadership", path: "/#leadership" },
                   { name: "Careers", path: "/#careers" },
-                  { name: "News & Updates", path: "/news" },
                 ].map((item) => (
                   <motion.li key={item.name}>
                     <motion.a
@@ -527,10 +526,10 @@ function Footer() {
               <ul className="space-y-4 mb-8">
                 {[
                   { name: "Contact Us", path: "/contact" },
-                  { name: "Help Center", path: "/help" },
-                  { name: "Privacy Policy", path: "/privacy-policy" },
-                  { name: "Terms of Service", path: "/terms" },
-                  { name: "Cookie Policy", path: "/cookies" },
+                  // { name: "Help Center", path: "/help" },
+                  // { name: "Privacy Policy", path: "/privacy-policy" },
+                  // { name: "Terms of Service", path: "/terms" },
+                  // { name: "Cookie Policy", path: "/cookies" },
                 ].map((item) => (
                   <motion.li key={item.name}>
                     <motion.a
