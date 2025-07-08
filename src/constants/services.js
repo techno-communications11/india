@@ -1,5 +1,4 @@
 import {
-  Users,
   Lock,
   Code,
   BarChart,

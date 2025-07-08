@@ -76,61 +76,7 @@ const ServicesPage = () => {
         />
       </div>
 
-      {/* Hero Section */}
-      <section className="relative pt-40 pb-32 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <div
-            className="absolute inset-0 opacity-30"
-            style={{
-              background: `radial-gradient(circle at ${mousePos.x}% ${mousePos.y}%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)`,
-            }}
-          />
-
-          {/* Floating Geometric Shapes */}
-         <GeometricShapes/>
-
-          {/* Grid Pattern Overlay */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="grid grid-cols-12 gap-px h-full">
-              {Array.from({ length: 144 }).map((_, i) => (
-                <div key={i} className="border border-cyan-300/20"></div>
-              ))}
-            </div>
-          </div>
-          <div className={`${fadeInUp} delay-200`}>
-            <motion.h1
-              className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: { opacity: 0 },
-                visible: {
-                  opacity: 1,
-                  transition: {
-                    staggerChildren: 0.05,
-                  },
-                },
-              }}
-            >
-              {"Our Services".split("").map((char, i) => (
-                <motion.span key={i} variants={textVariants} custom={i}>
-                  {char}
-                </motion.span>
-              ))}
-            </motion.h1>
-            <motion.p
-              className="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed"
-              initial="hidden"
-              animate="visible"
-              variants={textVariants}
-              custom={1}
-            >
-              Discover our comprehensive suite of services designed to
-              streamline your business operations and drive success.
-            </motion.p>
-          </div>
-        </div>
-      </section>
+    
 
       {/* Services Section */}
       <section className="py-20 px-6">

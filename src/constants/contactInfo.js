@@ -11,9 +11,9 @@ const contactInfo = [
     {
       icon: <Phone className="w-8 h-8" />,
       title: "Call Us",
-      details: "+91 123-456-7890",
+      details: "+918019316555",
       action: "Make a Call",
-      href: "tel:+911234567890",
+      href: "tel:+918019316555",
     },
     {
       icon: <MapPin className="w-8 h-8" />,

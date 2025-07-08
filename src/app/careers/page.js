@@ -4,8 +4,6 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import { LucideArrowRight } from "lucide-react";
 
-
-
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
   visible: {
@@ -293,11 +291,44 @@ const CareersPage = () => {
       </section>
 
       {/* Current Openings */}
-      <section
-        id="current-openings"
-        className="py-24 px-4 md:px-8 bg-gradient-to-b from-black via-blue-900/10 to-black"
-      >
-        job form
+      <section id="current-openings" className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Join Our Team
+            </h2>
+            <p className="text-lg text-gray-600">
+              We are always looking for talented individuals to join our growing
+              team.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="aspect-w-16 aspect-h-9 md:aspect-none">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfYf-iBA1YnOjli8-hvpsB82qqo1JgNUYec_bKTBXjmDhrsGA/viewform?embedded=true"
+                className="w-full h-[800px] md:h-[1000px] border-0"
+                frameBorder="0"
+                marginHeight="0"
+                marginWidth="0"
+                title="Job Application Form"
+              >
+                Loading…
+              </iframe>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center text-gray-500 text-sm">
+            Having trouble with the form?{" "}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfYf-iBA1YnOjli8-hvpsB82qqo1JgNUYec_bKTBXjmDhrsGA/viewform"
+              className="text-blue-600 hover:underline"
+            >
+              Open it in a new window
+            </a>
+            .
+          </div>
+        </div>
       </section>
     </div>
   );

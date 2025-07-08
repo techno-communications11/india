@@ -10,8 +10,7 @@ import {
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
-  FaHeart,
-  FaGlobe,
+
   FaCode,
   FaServer,
   FaDatabase,
@@ -283,45 +282,7 @@ function Footer() {
         viewport={{ once: true }}
       >
         {/* Newsletter Section */}
-        <motion.div
-          className="pt-12 pb-16 text-center border-b border-gray-700/50"
-          variants={itemVariants}
-        >
-          <h3 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">
-            Stay Connected
-          </h3>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg">
-            Get the latest updates, exclusive offers, and industry insights
-            delivered straight to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <motion.input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent text-white placeholder-gray-400/70 backdrop-blur-sm"
-              whileFocus={{
-                scale: 1.02,
-                borderColor: "#f472b6",
-                boxShadow: "0 0 10px rgba(244, 114, 182, 0.3)",
-              }}
-              transition={{ type: "spring", stiffness: 300 }}
-            />
-            <motion.button
-              onClick={handleSubscribe}
-              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-pink-500 text-white font-semibold rounded-lg shadow-lg"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 10px 20px rgba(244, 114, 182, 0.3)",
-                background: "linear-gradient(to right, #3b82f6, #ec4899)",
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Subscribe
-            </motion.button>
-          </div>
-        </motion.div>
+       
 
         {/* Main Footer Content */}
         <div className="py-16">
@@ -392,7 +353,7 @@ function Footer() {
                   >
                     <FaPhoneAlt className="text-green-300 text-sm" />
                   </motion.div>
-                  <span>+1 (346) 487-7627</span>
+                  <span>+918019316555</span>
                 </motion.div>
 
                 <motion.div
@@ -411,7 +372,7 @@ function Footer() {
                     <FaEnvelope className="text-purple-300 text-sm" />
                   </motion.div>
                   <span className="break-all">
-                    info@techno-communications-global-llc.com
+                    info@techno-communications.com
                   </span>
                 </motion.div>
               </div>
