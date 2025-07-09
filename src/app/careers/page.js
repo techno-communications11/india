@@ -303,11 +303,11 @@ const CareersPage = () => {
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="bg-transparent rounded-lg overflow-hidden">
             <div className="aspect-w-16 aspect-h-9 md:aspect-none">
               <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSfYf-iBA1YnOjli8-hvpsB82qqo1JgNUYec_bKTBXjmDhrsGA/viewform?embedded=true"
-                className="w-full h-[800px] md:h-[1000px] border-0"
+                className="w-full h-[800px] md:h-[1300px] border-0"
                 frameBorder="0"
                 marginHeight="0"
                 marginWidth="0"
