@@ -1,160 +1,168 @@
 import {
-  Lock,
   Code,
-  BarChart,
   Settings,
-  Headphones,
-  FileText,
-  Briefcase,
-  DollarSign,
-  Zap,
+  Wrench,
+  Bug,
+  Monitor,
+  Server,
+  Users,
+  FileCode,
+  LifeBuoy,
 } from "lucide-react";
+
 const services = [
   {
-    icon: <DollarSign className="w-8 h-8" />,
-    title: "HR Payroll & Services",
-    description:
-      "Comprehensive payroll solutions tailored for global and local compliance.",
-    subServices: [
-      {
-        title: "US Payroll",
-        description:
-          "Streamlined payroll processing for US-based employees with tax compliance.",
-      },
-      {
-        title: "India Payroll",
-        description:
-          "Efficient payroll management for India, adhering to local regulations.",
-      },
-      {
-        title: "Recruitment Services",
-        description: "End-to-end hiring solutions to find top talent.",
-      },
-      {
-        title: "Employee Engagement",
-        description: "Programs to boost morale and productivity.",
-      },
-    ],
-  },
-  {
-    icon: <Lock className="w-8 h-8" />,
-    title: "Surveillance",
-    description:
-      "Advanced security and monitoring solutions to protect your business.",
-    subServices: [
-      {
-        title: "Video Surveillance",
-        description: "Real-time monitoring with high-definition cameras.",
-      },
-      {
-        title: "Access Control",
-        description: "Secure access management for facilities and data.",
-      },
-    ],
-  },
-  {
     icon: <Code className="w-8 h-8" />,
-    title: "Web Development",
-    description: "Custom web solutions to enhance your digital presence.",
+    title: "Custom Software Development",
+    description:
+      "Tailor-made software solutions designed to meet unique business requirements.",
     subServices: [
       {
-        title: "Frontend Development",
-        description: "Responsive and user-friendly website interfaces.",
+        title: "Business Software",
+        description:
+          "Custom ERP, CRM, and domain-specific tools to streamline operations.",
       },
       {
-        title: "Backend Development",
-        description: "Robust server-side solutions for seamless functionality.",
-      },
-    ],
-  },
-  {
-    icon: <BarChart className="w-8 h-8" />,
-    title: "Data Analysis",
-    description: "Actionable insights through advanced data analytics.",
-    subServices: [
-      {
-        title: "Predictive Analytics",
-        description: "Forecast trends to drive strategic decisions.",
+        title: "Mobile & Web Apps",
+        description:
+          "Cross-platform applications with modern UI/UX and scalability.",
       },
       {
-        title: "Data Visualization",
-        description: "Interactive dashboards for clear data interpretation.",
+        title: "Embedded Systems",
+        description:
+          "Firmware and software solutions for hardware-integrated systems.",
       },
     ],
   },
   {
     icon: <Settings className="w-8 h-8" />,
-    title: "Process Support",
-    description: "Streamlined processes to boost operational efficiency.",
+    title: "Software Maintenance & Support",
+    description:
+      "End-to-end software lifecycle support to ensure performance and uptime.",
     subServices: [
       {
-        title: "Workflow Automation",
-        description: "Automate repetitive tasks to save time.",
+        title: "Bug Fixing & Patch Management",
+        description: "Timely resolution of issues and vulnerabilities.",
       },
       {
-        title: "Process Optimization",
-        description: "Enhance efficiency with tailored process improvements.",
+        title: "Feature Enhancements",
+        description: "Continuous improvement of existing software systems.",
       },
     ],
   },
   {
-    icon: <Headphones className="w-8 h-8" />,
-    title: "Client Services",
-    description: "Dedicated support to ensure client satisfaction.",
+    icon: <Wrench className="w-8 h-8" />,
+    title: "System Integration Services",
+    description:
+      "Seamless integration of various software and hardware components.",
     subServices: [
       {
-        title: "24/7 Support",
-        description: "Round-the-clock assistance for all client needs.",
+        title: "API Integration",
+        description: "Link internal and external systems with secure APIs.",
       },
       {
-        title: "Account Management",
-        description: "Personalized account support for seamless collaboration.",
-      },
-    ],
-  },
-  
-  {
-    icon: <FileText className="w-8 h-8" />,
-    title: "Data Management",
-    description: "Secure and efficient data storage and retrieval systems.",
-    subServices: [
-      {
-        title: "Data Security",
-        description: "Protect sensitive data with advanced security measures.",
-      },
-      {
-        title: "Database Management",
-        description: "Organized and scalable database solutions.",
+        title: "Legacy System Upgrades",
+        description:
+          "Modernize existing systems while retaining business continuity.",
       },
     ],
   },
   {
-    icon: <Briefcase className="w-8 h-8" />,
-    title: "Consultancy Services",
-    description: "Expert guidance to drive business success.",
+    icon: <Bug className="w-8 h-8" />,
+    title: "Software Testing & QA",
+    description:
+      "Comprehensive testing services for reliable and secure applications.",
     subServices: [
       {
-        title: "Business Strategy",
-        description: "Strategic planning to achieve long-term goals.",
+        title: "Manual & Automated Testing",
+        description: "Ensure product quality through rigorous testing cycles.",
       },
       {
-        title: "IT Consulting",
-        description: "Tailored IT solutions to meet business needs.",
+        title: "Performance & Load Testing",
+        description: "Validate stability under real-world conditions.",
       },
     ],
   },
   {
-    icon: <Zap className="w-8 h-8" />,
-    title: "Expenses Management",
-    description: "Efficient tools to manage and track business expenses.",
+    icon: <Monitor className="w-8 h-8" />,
+    title: "UI/UX Design Services",
+    description:
+      "Intuitive user experiences and attractive interfaces for software products.",
     subServices: [
       {
-        title: "Expense Tracking",
-        description: "Real-time monitoring of business expenditures.",
+        title: "User-Centric Design",
+        description: "Design interfaces that improve usability and engagement.",
       },
       {
-        title: "Budget Planning",
-        description: "Tools to create and manage budgets effectively.",
+        title: "Prototyping & Wireframing",
+        description: "Rapid visual concepts before development begins.",
+      },
+    ],
+  },
+  {
+    icon: <Server className="w-8 h-8" />,
+    title: "Cloud & DevOps Services",
+    description:
+      "Reliable cloud hosting, CI/CD pipelines, and infrastructure management.",
+    subServices: [
+      {
+        title: "AWS, Azure, GCP Deployment",
+        description: "Cloud-native application setup and monitoring.",
+      },
+      {
+        title: "DevOps Automation",
+        description: "CI/CD, containerization, and infrastructure as code.",
+      },
+    ],
+  },
+  {
+    icon: <Users className="w-8 h-8" />,
+    title: "Software Consulting",
+    description:
+      "Strategic consulting to optimize software architecture and delivery.",
+    subServices: [
+      {
+        title: "Technical Audits",
+        description: "Evaluate software design, code quality, and architecture.",
+      },
+      {
+        title: "Project Planning",
+        description: "Define timelines, tools, and technologies for execution.",
+      },
+    ],
+  },
+  {
+    icon: <FileCode className="w-8 h-8" />,
+    title: "Product Engineering",
+    description:
+      "Transform your product idea into a market-ready software solution.",
+    subServices: [
+      {
+        title: "MVP Development",
+        description:
+          "Lean product development to validate ideas quickly and cost-effectively.",
+      },
+      {
+        title: "Product Lifecycle Management",
+        description:
+          "Support from concept to launch and post-deployment evolution.",
+      },
+    ],
+  },
+  {
+    icon: <LifeBuoy className="w-8 h-8" />,
+    title: "Technical Support Services",
+    description: "Ongoing technical support to ensure smooth software use.",
+    subServices: [
+      {
+        title: "L1, L2, L3 Support",
+        description:
+          "Multi-tiered support structure to resolve issues based on severity.",
+      },
+      {
+        title: "Service Desk Setup",
+        description:
+          "Establish structured IT support processes and response teams.",
       },
     ],
   },

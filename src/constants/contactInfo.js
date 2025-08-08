@@ -4,9 +4,9 @@ const contactInfo = [
     {
       icon: <Mail className="w-8 h-8" />,
       title: "Email Us",
-      details: "info@technocommunications.com",
+      details: "info@technocommunicationsglobal.com",
       action: "Send an Email",
-      href: "mailto:info@technocommunications.com",
+      href: "mailto:info@technocommunicationsglobal.com",
     },
     {
       icon: <Phone className="w-8 h-8" />,
@@ -18,9 +18,9 @@ const contactInfo = [
     {
       icon: <MapPin className="w-8 h-8" />,
       title: "Visit Us",
-      details: "Hyderabad, Telangana 500081, India",
+      details: "202. 2th floor, SCR Tower, Siddhi Vinayak Nagar, Madhapur, Hyderabad, Telangana 500081",
       action: "Get Directions",
-      href: "https://maps.google.com",
+      href: "https://maps.app.goo.gl/MBj2o9t6wYEjwVpg8",
     },
   ];
 

@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+# If the request is a file or directory, skip the rewrite
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Rewrite all other URLs to their corresponding .html files
+RewriteRule ^(.+?)/?$ $1.html [L]

@@ -67,9 +67,9 @@ function LandingHeader() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center px-2 max-w-6xl mx-auto mt-25">
+      <div className="relative z-10 text-center px-2 max-w-6xl mx-auto mt-50">
         {/* Animated WE */}
-        <div className="relative mb-8">
+        <div className="relative">
           <h1 className="text-9xl sm:text-[12rem] lg:text-[15rem] font-black tracking-tighter">
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-pulse">

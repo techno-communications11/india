@@ -1,32 +1,58 @@
-import React from 'react';
+// components/NavLinks.js
+import React from "react";
+import Link from "next/link";
 
-const NavLinks = ({ currentPath, onAboutClick, onServicesClick, onContactClick }) => {
+const NavLinks = ({
+  currentPath,
+  onAboutClick,
+  onServicesClick,
+  onContactClick,
+  isScrolled,
+}) => {
   const links = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/#about', onClick: onAboutClick },
-    { name: 'Services', href: '/#services', onClick: onServicesClick },
-    { name: 'Contact', href: '/#contact', onClick: onContactClick },
-     { name: 'Careers', href: '/careers' },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/#about", onClick: onAboutClick },
+    { name: "Services", href: "/#services", onClick: onServicesClick },
+    { name: "Contact", href: "/#contact", onClick: onContactClick },
+    { name: "Careers", href: "/careers/jobs" },
   ];
 
+  const handleClick = (e, onClick) => {
+    if (onClick) {
+      e.preventDefault();
+      onClick();
+    }
+  };
 
   return (
-    <nav className="flex space-x-6">
+    <ul className="flex space-x-6 md:space-x-8 font-medium text-sm tracking-wide">
       {links.map((link) => (
-        <a
-          key={link.name}
-          href={link.href}
-          onClick={link.onClick}
-          className={`text-lg font-medium transition-all duration-300 ${
-            currentPath === link.href
-              ? 'text-cyan-400 border-b-2 border-cyan-400'
-              : 'text-gray-300 hover:text-cyan-400 hover:border-b-2 hover:border-cyan-400/50'
-          }`}
-        >
-          {link.name}
-        </a>
+        <li key={link.name}>
+          <Link
+            href={link.href}
+            onClick={(e) => handleClick(e, link.onClick)}
+            // legacyBehavior
+          >
+            <span
+              className={`relative inline-block px-1 py-2 transition-all duration-300 hover:text-cyan-300 group ${
+                currentPath === link.href
+                  ? "text-cyan-400"
+                  : isScrolled
+                  ? "text-gray-800"
+                  : "text-white"
+              }`}
+            >
+              {link.name}
+              <span
+                className={`absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full ${
+                  currentPath === link.href ? "w-full" : "group-hover:w-full"
+                }`}
+              ></span>
+            </span>
+          </Link>
+        </li>
       ))}
-    </nav>
+    </ul>
   );
 };
 
