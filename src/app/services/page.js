@@ -1,19 +1,15 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { 
   ArrowRight, 
   Code, 
-  Users, 
-  DollarSign, 
-  ShoppingCart, 
+  Users,  
   Headphones, 
   Monitor,
   Server,
-  Cloud,
   Shield,
   Settings,
   Database,
-  Globe,
-  Smartphone,
   Zap,
   Wrench,
   Link,
@@ -420,7 +416,7 @@ const ServicesPage = () => {
                     >
                       <div className="space-y-4 pt-4 border-t border-slate-200">
                         <h4 className="text-lg font-semibold text-slate-900 mb-4">
-                          What's Included:
+                          What&apos;s Included:
                         </h4>
                         {service.subServices.map((subService, subIndex) => (
                           <div
@@ -523,7 +519,7 @@ const ServicesPage = () => {
                 Ready to Elevate Your IT Infrastructure?
               </h2>
               <p className="text-xl text-blue-100 mb-8 leading-relaxed font-light">
-                Let's discuss how our comprehensive IT services can streamline your operations, 
+                Let$apos;s discuss how our comprehensive IT services can streamline your operations, 
                 enhance security, and drive growth for your business. Our team is ready to 
                 create a customized solution that fits your unique requirements.
               </p>

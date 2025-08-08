@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import {
   ArrowRight,
@@ -117,10 +118,10 @@ const AboutUsPage = () => {
               
               <div className="space-y-4 text-lg text-slate-700 leading-relaxed">
                 <p>
-                  At Techno Communications Pvt. Ltd., we believe technology should feel effortless — something that works quietly in the background while you focus on growing your business. We're not just another IT services company; we're your technology partner, here to simplify, support, and strengthen the way you work.
+                  At Techno Communications Pvt. Ltd., we believe technology should feel effortless — something that works quietly in the background while you focus on growing your business. We&apos;re not just another IT services company; we&apos;re your technology partner, here to simplify, support, and strengthen the way you work.
                 </p>
                 <p>
-                  Over the years, we've grown into a trusted name in the world of IT and computer services. From keeping your systems running smoothly to helping you move to the cloud, we offer smart, scalable solutions that fit your business — not the other way around.
+                  Over the years, we&apos;ve grown into a trusted name in the world of IT and computer services. From keeping your systems running smoothly to helping you move to the cloud, we offer smart, scalable solutions that fit your business — not the other way around.
                 </p>
               </div>
             </div>
@@ -184,16 +185,16 @@ const AboutUsPage = () => {
               <div className="w-16 h-1 bg-blue-600 rounded-full mb-6"></div>
               <div className="space-y-4 text-lg text-slate-700 leading-relaxed">
                 <p>
-                  It's simple — helping businesses use technology better. We know how fast things change in the digital world, and we're here to keep you one step ahead. So whether you're a startup looking for guidance or an enterprise ready to scale, we've got your back with reliable solutions and responsive support.
+                  It&apos;s simple — helping businesses use technology better. We know how fast things change in the digital world, and we&apos;re here to keep you one step ahead. So whether you&apos;re a startup looking for guidance or an enterprise ready to scale, we&apos;ve got your back with reliable solutions and responsive support.
                 </p>
                 <p>
                   We understand that every company is different, so we listen first, then build the right tools and support around what you need. Our team is a mix of curious minds, tech enthusiasts, and problem-solvers who genuinely care about doing good work.
                 </p>
                 <p>
-                  Whether it's setting up infrastructure, managing networks, or solving complex IT issues, we do it with precision and a personal touch. We're proud of the long-term relationships we've built — not just with systems, but with people.
+                  Whether it&apos;s setting up infrastructure, managing networks, or solving complex IT issues, we do it with precision and a personal touch. We&apos;re proud of the long-term relationships we&apos;ve built — not just with systems, but with people.
                 </p>
                 <p className="text-2xl font-semibold text-blue-600 italic">
-                  "Let's build something better together — powered by technology, driven by people."
+                  Let&apos;s build something better together — powered by technology, driven by people.
                 </p>
               </div>
             </div>
@@ -452,7 +453,7 @@ const AboutUsPage = () => {
               </h2>
               
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Whether you're looking to modernize your existing systems, migrate to the cloud, or need ongoing IT support, we're here to help. Let's discuss how we can streamline your operations and drive your business forward.
+                Whether you&apos;re looking to modernize your existing systems, migrate to the cloud, or need ongoing IT support, we&apos;re here to help. Let&apos;s discuss how we can streamline your operations and drive your business forward.
               </p>
               
               <button
