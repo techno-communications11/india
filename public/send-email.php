@@ -1,42 +1,48 @@
 <?php
+
+// CORS Headers
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
+
 // Ensure no output before JSON response
 ob_end_clean();
-
-// Return JSON content type
 header('Content-Type: application/json');
 
-// Enable error reporting for debugging (remove in production)
+// Enable error reporting (remove in production)
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // ==== CONFIG ====
-// Load API key from environment variable or config file for security
 $RESEND_API_KEY = getenv('RESEND_API_KEY') ?: "re_VxTGEST4_ESyjK54YEZPpMhYeXvXhKcQk";
 $TO_EMAIL = "potharajutharunrana@gmail.com";
 
-// ==== READ JSON INPUT ====
-$input = json_decode(file_get_contents("php://input"), true);
+// ==== READ DATA ====
+$name = trim($_POST['name'] ?? '');
+$email = trim($_POST['email'] ?? '');
+$message = trim($_POST['message'] ?? '');
 
-// Basic validation
-$name = trim($input['name'] ?? '');
-$email = trim($input['email'] ?? '');
-$message = trim($input['message'] ?? '');
-
-if (!$name || !$email ||!$message) {
+// ==== VALIDATION ====
+if (empty($name) || empty($email) || empty($message)) {
     http_response_code(400);
-    echo json_encode(["error" => "All fields are required"]);
+    echo json_encode(["success" => false, "error" => "All fields are required"]);
     exit;
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(400);
-    echo json_encode(["error" => "Invalid email address"]);
+    echo json_encode(["success" => false, "error" => "Invalid email address"]);
     exit;
 }
 
-// Sanitize inputs to prevent XSS
+// Sanitize inputs
 $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+$email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
 $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 
 // ==== BUILD HTML EMAIL ====
@@ -84,10 +90,10 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
     "from" => "ticketing@techno-communications.com",
     "to" => [$TO_EMAIL],
     "reply_to" => $email,
+    "subject" => "New Contact Form Submission",
     "html" => $htmlContent
 ]));
 
-// Execute request
 $response = curl_exec($ch);
 $httpStatus = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 $curlError = curl_error($ch);
@@ -96,18 +102,18 @@ curl_close($ch);
 // ==== ERROR HANDLING ====
 if ($curlError) {
     http_response_code(500);
-    echo json_encode(["error" => "cURL error: $curlError"]);
+    echo json_encode(["success" => false, "error" => "cURL error: $curlError"]);
     exit;
 }
 
-// Parse Resend API response
 $responseData = json_decode($response, true);
 if ($httpStatus !== 200 || isset($responseData['error'])) {
     http_response_code($httpStatus);
-    echo json_encode(["error" => $responseData['error'] ?? "Failed to send email"]);
+    echo json_encode(["success" => false, "error" => $responseData['error'] ?? "Failed to send email"]);
     exit;
 }
 
-// Success response
+// ==== SUCCESS ====
 http_response_code(200);
-echo json_encode(["message" => "Email sent successfully"]);
+echo json_encode(["success" => true, "message" => "Email sent successfully"]);
+?>
