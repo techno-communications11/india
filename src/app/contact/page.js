@@ -36,12 +36,37 @@ const ContactPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitStatus("Thank you! We’ll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
-    setTimeout(() => setSubmitStatus(""), 3000);
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch("https://technocommunicationsglobal.com/send-email.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json", // Make sure PHP reads JSON or use form-data
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const result = await response.json(); // Expecting JSON from PHP
+    if (result.success) {
+      setSubmitStatus("✅ Thank you! We’ll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      setSubmitStatus("❌ Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    console.error("Form submission error:", error);
+    setSubmitStatus("❌ Failed to send message. Please check your connection.");
+  }
+
+  setTimeout(() => setSubmitStatus(""), 3000);
+};
+
 
   return (
     <>
